@@ -1,9 +1,9 @@
 import express from 'express'
 import cors from 'cors'
-import dbConnection from './src/database/config'
-import users from './src/routes/admin'
-import newsletter from './src/routes/newsletter'
-import recipient from './src/routes/recipient'
+import dbConnection from './database/config'
+import users from './routes/admin'
+import newsletter from './routes/newsletter'
+import recipient from './routes/recipient'
 import dotenv from 'dotenv'
 dotenv.config()
 const app = express()

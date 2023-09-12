@@ -5,7 +5,7 @@ const transporter = nodemailer.createTransport({
   port: 587,
   auth: {
     user: 'apikey',
-    pass: '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',
+    pass: process.env.SENDGRID_API_KEY,
   },
 })
 
@@ -42,7 +42,6 @@ export const sendEmail = async (
       await transporter.sendMail(mailOptions)
     }
   } catch (error) {
-    console.error('Error sending email:', error)
     throw error
   }
 }
